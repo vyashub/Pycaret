@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Predict Insurance Bill</title>
+  <link href='https://fonts.googleapis.com/css?family=Pacifico' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Arimo' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Hind:300' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300' rel='stylesheet' type='text/css'>
+<link type="text/css" rel="stylesheet" href="{{ url_for('static', filename='./style.css') }}">
+  
+</head>
+
+<body>
+ <div class="login">
+	<h1>Predict Insurance Bill</h1>
+
+     <!-- Form to enter new data for predictions  -->
+    <form action="{{ url_for('predict')}}"method="POST">
+      <input type="text" name="crim" placeholder="CRIM" required="required" /><br>
+    	<input type="text" name="zn" placeholder="ZONE" required="required" /><br>
+        <input type="text" name="indus" placeholder="INDUS" required="required" /><br>
+        <input type="text" name="chas" placeholder="Chas" required="required" /><br>
+        <input type="text" name="nox" placeholder="NOX" required="required" /><br>
+        <input type="text" name="rm" placeholder="AGE" required="required" /><br>
+        <input type="text" name="age" placeholder="AGE" required="required" /><br>
+        <input type="text" name="dis" placeholder="DIS" required="required" /><br>
+        <input type="text" name="rad" placeholder="RAD" required="required" /><br>
+        <input type="text" name="tax" placeholder="TAX" required="required" /><br>
+        <input type="text" name="ptratio" placeholder="PTRATIO" required="required" /><br>
+        <input type="text" name="black" placeholder="BLACK" required="required" /><br>
+        <input type="text" name="lstat" placeholder="LSTAT" required="required" /><br>
+
+        <button type="submit" class="btn btn-primary btn-block btn-large">Predict</button>
+    </form>
+
+   <br>
+   <br>
+  
+   
+ </div>
+ {{pred}}
+
+</body>
+</html>
